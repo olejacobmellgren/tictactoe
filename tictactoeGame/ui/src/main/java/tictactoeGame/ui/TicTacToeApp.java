@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 /**
  * JavaFX App.
  */
-public class ProjectApp extends Application {
+public class TicTacToeApp extends Application {
 
     /**
      * The app will be setup and be ready to be launched.
@@ -18,10 +18,10 @@ public class ProjectApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(this.getClass()
-                                                   .getResource("Dummy.fxml"));
+                                                   .getResource("Tictactoe.fxml"));
         Parent parent = fxmlLoader.load();
         stage.setScene(new Scene(parent));
-        stage.setTitle("Dummy");
+        stage.setTitle("TicTacToe");
         stage.show();
     }
 

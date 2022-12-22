@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>template.projectName</groupId>
+        <groupId>tictactoe.tictactoeGame</groupId>
         <artifactId>parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -13,7 +13,7 @@
     <dependencies>
 
         <dependency>
-            <groupId>template.projectName</groupId>
+            <groupId>template.tictactoeGame</groupId>
             <artifactId>core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -85,7 +85,7 @@
                 <configuration>
                     <argLine>
                     @{jaCoCoArgLine}
-                    --add-opens projectName.ui/projectName.ui=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.application=ALL-UNNAMED
+                    --add-opens tictactoeGame.ui/tictactoeGame.ui=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.application=ALL-UNNAMED
                     </argLine>
                 </configuration>
 	        </plugin>
@@ -113,16 +113,16 @@
                 <!-- Default configuration for running -->
                 <!-- Usage: mvn javafx:run -->
                 <configuration>
-                    <mainClass>projectName.ui.ProjectApp</mainClass>
+                    <mainClass>tictactoeGame.ui.ProjectApp</mainClass>
 
                      <!-- rest is for jlink -->
                     <compress>2</compress>
                     <noHeaderFiles>true</noHeaderFiles>
                     <stripDebug>true</stripDebug>
                     <noManPages>true</noManPages>
-                    <launcher>projectName</launcher>
-                    <jlinkImageName>projectName</jlinkImageName>
-                    <jlinkZipName>projectName</jlinkZipName>
+                    <launcher>tictactoeGame</launcher>
+                    <jlinkImageName>tictactoeGame</jlinkImageName>
+                    <jlinkZipName>tictactoeGame</jlinkZipName>
 
                 </configuration>
             </plugin>
@@ -134,24 +134,24 @@
                 <artifactId>jpackage-maven-plugin</artifactId>
                 <version>1.4.0</version>
                 <configuration>
-                    <name>clothingStorage</name>
+                    <name>tictactoeGame</name>
                     <appVersion>1.0.0</appVersion>
                     <vendor>it1901</vendor>
                     <destination>target/dist</destination>
-                    <module>projectName.ui/projectName.ui.projectName</module>
-                    <runtimeImage>target/projectName</runtimeImage>
+                    <module>tictactoeGame.ui/tictactoeGame.ui.tictactoeGame</module>
+                    <runtimeImage>target/tictactoeGame</runtimeImage>
                     <javaOptions>
                         <option>-Dfile.encoding=UTF-8</option>
                     </javaOptions>
                     <!-- linux options --> 
                     <linuxShortcut>true</linuxShortcut>
-                    <linuxMenuGroup>projectName</linuxMenuGroup>
+                    <linuxMenuGroup>tictactoeGame</linuxMenuGroup>
 
                     <!-- windows options --> 
                     <winDirChooser>true</winDirChooser>
                     <winShortcut>true</winShortcut>
                     <winMenu>true</winMenu>
-                    <winMenuGroup>projectName</winMenuGroup>
+                    <winMenuGroup>tictactoeGame</winMenuGroup>
                 </configuration>
             </plugin>
         </plugins>
