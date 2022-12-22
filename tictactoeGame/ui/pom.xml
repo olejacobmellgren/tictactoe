@@ -13,7 +13,7 @@
     <dependencies>
 
         <dependency>
-            <groupId>template.tictactoeGame</groupId>
+            <groupId>tictactoe.tictactoeGame</groupId>
             <artifactId>core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -113,7 +113,7 @@
                 <!-- Default configuration for running -->
                 <!-- Usage: mvn javafx:run -->
                 <configuration>
-                    <mainClass>tictactoeGame.ui.ProjectApp</mainClass>
+                    <mainClass>tictactoeGame.ui/tictactoeGame.ui.TictactoeApp</mainClass>
 
                      <!-- rest is for jlink -->
                     <compress>2</compress>

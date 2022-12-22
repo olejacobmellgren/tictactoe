@@ -1,4 +1,4 @@
-package projectName.ui;
+package tictactoeGame.ui;
 
 import java.io.IOException;
 import javafx.application.Application;
@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 /**
  * JavaFX App.
  */
-public class TicTacToeApp extends Application {
+public class TictactoeApp extends Application {
 
     /**
      * The app will be setup and be ready to be launched.

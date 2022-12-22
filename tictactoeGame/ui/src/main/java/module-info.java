@@ -1,9 +1,9 @@
-module projectName.ui {
+module tictactoeGame.ui {
     
     requires javafx.base;
     requires javafx.controls;
     requires javafx.fxml;
-    requires projectName.core;
+    requires tictactoeGame.core;
 
-    opens projectName.ui to javafx.graphics, javafx.fxml;
+    opens tictactoeGame.ui to javafx.graphics, javafx.fxml;
 }

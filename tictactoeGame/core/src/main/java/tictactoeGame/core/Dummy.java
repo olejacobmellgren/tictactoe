@@ -1,4 +1,4 @@
-package projectName.core;
+package tictactoeGame.core;
 
 public class Dummy {
     
