@@ -1,10 +1,7 @@
 package tictactoeGame.ui;
 
 import java.io.IOException;
-import java.time.Duration;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -30,6 +27,15 @@ public class TictactoeTwoController {
     @FXML private Text a1C, a2C, a3C, b1C, b2C, b3C, c1C, c2C, c3C;
 
     private boolean player1turn = true;
+
+    @FXML private void handleBack() throws IOException {
+        Stage stage = (Stage) back.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Startpage.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     
     @FXML private void handleOK() throws InterruptedException {
         if (player1.getText().equals("") || player2.getText().equals("")) {
@@ -172,15 +178,6 @@ public class TictactoeTwoController {
         checkIsVictory();
     }
 
-    @FXML private void handleBack() throws IOException {
-        Stage stage = (Stage) back.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Startpage.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
     @FXML 
 
     private void showGameOver(String winner) {
@@ -213,6 +210,9 @@ public class TictactoeTwoController {
             showGameOver(name1.getText());
             Integer scoreP1 = Integer.valueOf(score1.getText());
             score1.setText(String.valueOf(scoreP1 + 1));
+            starter.setVisible(true);
+            starter.setText(name2.getText() + " starts the game!");
+            player1turn = false;
             restart();
         } else if ((a1C.isVisible() && a2C.isVisible() && a3C.isVisible()) || (a1C.isVisible() && b2C.isVisible() && c3C.isVisible()) ||
                     (a1C.isVisible() && b1C.isVisible() && c1C.isVisible()) || (b1C.isVisible() && b2C.isVisible() && b3C.isVisible()) ||
@@ -221,6 +221,9 @@ public class TictactoeTwoController {
             showGameOver(name2.getText());
             Integer scoreP2 = Integer.valueOf(score2.getText());
             score2.setText(String.valueOf(scoreP2 + 1));
+            starter.setVisible(true);
+            starter.setText(name1.getText() + " starts the game!");
+            player1turn = true;
             restart();
         } else if ((a1C.isVisible() || a1S.isVisible()) && (a2C.isVisible() || a2S.isVisible()) && (a3C.isVisible() || a3S.isVisible()) &&
                     (b1C.isVisible() || b1S.isVisible()) && (b2C.isVisible() || b2S.isVisible()) && (b3C.isVisible() || b3S.isVisible()) &&
@@ -270,7 +273,5 @@ public class TictactoeTwoController {
         c1.toFront();
         c2.toFront();
         c3.toFront();
-
-        player1turn = true;
     }   
 }
