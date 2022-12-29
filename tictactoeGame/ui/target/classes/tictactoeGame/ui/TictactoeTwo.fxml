@@ -152,7 +152,7 @@
             <Font size="40.0" />
          </font>
       </Label>
-      <Pane fx:id="names" layoutX="37.0" layoutY="14.0" prefHeight="512.0" prefWidth="508.0" style="-fx-background-color: green;">
+      <Pane fx:id="names" layoutX="37.0" layoutY="48.0" prefHeight="478.0" prefWidth="508.0" style="-fx-background-color: green;">
          <children>
             <Button id="sale" layoutX="400.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleOK" stylesheets="@stylesheet.css" text="OK" />
             <Label layoutX="96.0" layoutY="87.0" text="Player 1:" textFill="WHITE">
@@ -169,5 +169,10 @@
             <TextField fx:id="player2" layoutX="174.0" layoutY="144.0" />
          </children>
       </Pane>
+      <Label fx:id="starter" alignment="CENTER" layoutX="86.0" layoutY="21.0" prefHeight="37.0" prefWidth="410.0" style="-fx-background-color: green;" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
