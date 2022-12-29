@@ -229,6 +229,8 @@ public class TictactoeTwoController {
                     (b1C.isVisible() || b1S.isVisible()) && (b2C.isVisible() || b2S.isVisible()) && (b3C.isVisible() || b3S.isVisible()) &&
                     (c1C.isVisible() || c1S.isVisible()) && (c2C.isVisible() || c2S.isVisible()) && (c3C.isVisible() || c3S.isVisible())) {
                         showTie();
+                        starter.setVisible(true);
+                        starter.setText(name1.getText() + " starts the game!");
                         restart();
                     }
     }

@@ -1,2 +1,5 @@
 tictactoeGame/ui/TictactoeApp.class
+tictactoeGame/ui/TictactoeSingleController.class
 module-info.class
+tictactoeGame/ui/TictactoeTwoController.class
+tictactoeGame/ui/StartpageController.class
